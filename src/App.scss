@@ -1,0 +1,19 @@
+@import "style/style";
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+a, ul ,li {
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
