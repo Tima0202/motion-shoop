@@ -23,7 +23,7 @@ const Header = () => {
                             <span>FAQ</span>
                         </div>
                         <div className="block">
-                            <Link className="block" to={"/manpage"}>
+                            <Link className="block" to={"/ManPage"}>
                                 <img src={logo2} alt=""/>
                                 <span>О нас</span>
                             </Link>
