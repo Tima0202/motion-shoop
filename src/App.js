@@ -6,6 +6,7 @@ import Home from "./components/Home/Home";
 
 import {Routes, Route} from "react-router-dom";
 import ManPage from "./components/ManPage/ManPage";
+import WomenPage from "./components/WomenPage/WomenPage";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route path={"/Header"} element={<Header/>}/>
           <Route path={'/Footer'} element={<Footer/>}/>
           <Route path={'/ManPage'} element={<ManPage/>}/>
+          <Route path={'/WomenPage'} element={<WomenPage/>}/>
       </Routes>
     </div>
   );
