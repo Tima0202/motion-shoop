@@ -1,6 +1,6 @@
 #header{
   background: linear-gradient(90deg, #72072D 0%, #FF005C 100%);
-  height: 9rem;
+  height: 9.5rem;
   padding: 0 20px;
   img{
     width: 35px;
@@ -14,16 +14,19 @@
     padding: 40px 0;
     position: relative;
     z-index: 1;
+    .left{
+    }
     .iconch{
       position: absolute;
       z-index: 2;
-      top: 3.7rem;
-      right: 36.5rem;
+      top: 4rem;
+      right: 40rem;
       font-size: 23px;
       color: white;
     }
     h1{
       color: white;
+      font-size: 55px;
     }
     input{
       color: white;
@@ -44,6 +47,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-left: 2rem;
         span{
           padding-top: 5px;
         }
