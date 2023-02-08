@@ -39,7 +39,10 @@ const Footer = () => {
                         </div>
                         <div className="right">
                             <h5>Адрес</h5>
-                            <p>Lorem ipsum dolor sit amet, consectetur <br/> adipisicing elit. Ad aperiam <br/> architecto beatae doloremque <br/> et explicabo libero magni quam <br/> quasi vel.</p>
+                            <p>Компания Motion занимается оптовой поставкой <br/> спортивных товаров из Китая, Турции, ОАЭ и Пакистана. <br/>
+                                Спортивный магазин акцентирован на <br/> футбольной тематике.
+                                У нас вы всегда найдете атрибутику, <br/> обувь и экипировку для футбола. <br/>
+                                И только у нас лучшие цены во всем Казахстане!</p>
                         </div>
                     </div>
                     <div className="down">
