@@ -1,7 +1,5 @@
 #womenpage{
   padding: 0 20px;
-
-
   .womenpage{
     font-family: 'Inter',sans serif;
     font-style: normal;
@@ -13,6 +11,10 @@
     img{
       margin: 5px 20px;
     }
+    .women-images{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
     .title{
       font-family: 'Roboto', sans-serif;
       font-style: normal;
@@ -21,6 +23,11 @@
       line-height: 117.69%;
       letter-spacing: -0.025em;
       color: #000000;
+      .image5{
+        width: 238px;
+        height: 284px;
+       }
+      }
     }
   }
 }

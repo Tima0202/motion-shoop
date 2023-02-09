@@ -7,6 +7,7 @@ import womenClothes1 from "../../image/wom-img2.svg"
 import womenClothes2 from "../../image/wom-img3.svg"
 import womenClothes3 from "../../image/wom-img4.svg"
 import womenClothes4 from "../../image/wom-img5.svg"
+import womenClothes5 from "../../image/t-shirts.jpg"
 
 const WomenPage = () => {
     // script logic
@@ -17,16 +18,105 @@ const WomenPage = () => {
                     <img src={salam1} alt=""/>
                     <img src={salam2} alt=""/>
                     <img src={salam3} alt=""/>
-                    <img src={salam4} alt=""/>
-                    <h1>Женская одежда</h1>
+                    <img src={salam4} alt=""/><h1>Женская одежда</h1>
                 </div>
 
-                <div>
-                    <img src={womenClothes1} alt=""/>
-                    <h1 className="title">2100 сом</h1>
-                    <img src={womenClothes2} alt=""/>
-                    <img src={womenClothes3} alt=""/>
-                    <img src={womenClothes4} alt=""/>
+                <div className="women-images">
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes2} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes3} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes4} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes5} alt="" className="image5"/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
+
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title">2100 сом</h1>
+                        <p>Футболка нарядная / летняя</p>
+                    </div>
                 </div>
             </div>
         </div>
