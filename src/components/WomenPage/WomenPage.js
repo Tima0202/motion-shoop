@@ -18,16 +18,36 @@ const WomenPage = () => {
                     <img src={salam2} alt=""/>
                     <img src={salam3} alt=""/>
                     <img src={salam4} alt=""/>
-                    <h1>Женская одежда</h1>
+                    <h1 className="title">Женская одежда</h1>
                 </div>
 
-                <div>
-                    <img src={womenClothes1} alt=""/>
-                    <h1 className="title">2100 сом</h1>
-                    <img src={womenClothes2} alt=""/>
-                    <img src={womenClothes3} alt=""/>
-                    <img src={womenClothes4} alt=""/>
-                </div>
+
+                <div className="img-title">
+                    <div>
+                        <img src={womenClothes1} alt=""/>
+                        <h1 className="title2">2100 сом</h1>
+                        <p className="desc">Футболка нарядная / летняя</p>
+
+                        <div>
+                            <img src={womenClothes2} alt=""/>
+                            <h1 className="title2">2000 сом</h1>
+                            <p className="desc">Комбизон</p>
+                        </div>
+
+                        <div>
+                            <img src={womenClothes3} alt=""/>
+                            <h1 className="title2">1500coм</h1>
+                            <p className="desc">Фудболка</p>
+                        </div>
+
+                        <div>
+                            <img src={womenClothes4} alt=""/>
+                            <h1 className="title2">3000coм</h1>
+                            <p className="desc">Костюм</p>
+                        </div>
+                    </div>
+
+            </div>
             </div>
         </div>
     );
