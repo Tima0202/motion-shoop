@@ -19,8 +19,13 @@ const Header = () => {
                     <div className="around"><input type="text" placeholder="Я ищу ..."/><AiOutlineSearch className="iconch"/></div>
                     <div className="right">
                         <div className="block">
-                            <img src={logo} alt=""/>
-                            <span>FAQ</span>
+
+                            <Link className="block" to={"/WomenPage"}>
+                                <img src={logo} alt=""/>
+                                <span>FAQ</span>
+                            </Link>
+
+
                         </div>
                         <div className="block">
                             <Link className="block" to={"/ManPage"}>

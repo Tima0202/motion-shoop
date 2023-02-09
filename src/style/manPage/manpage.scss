@@ -5,10 +5,53 @@
 
       .man {
         width: 25%;
+        height: 50px;
         padding: 0 25px;
-      }
-      .man:hover {
+        transition: 0.5s;
 
+      }
+      .man:hover{
+        width: 25%;
+        height: 170px;
+      }
+    }
+  }
+
+  .boy {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    color: #72072D;
+    padding: 25px 40px;
+  }
+
+  .show {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    .select {
+      padding: 20px 0 10px 35px;
+
+      .pats {
+        width: 79%;
+        transition: 0.7s;
+      }
+      .pats:hover{
+        transform: scale(1.1);
+      }
+
+      .cost {
+        font-weight: 800;
+        font-size: 20px;
+        padding: 5px 5px 7px 5px;
+      }
+
+      .name {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 11px;
+        padding: 0 5px;
       }
     }
   }
@@ -63,8 +106,4 @@
     transition: 1s;
   }
 
-  .btn:hover {
-    background: #D118A8;
-    color: white;
-  }
 }

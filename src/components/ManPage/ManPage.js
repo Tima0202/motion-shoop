@@ -18,6 +18,7 @@ import photo16 from "../../image/aqua.webp"
 import photo17 from "../../image/pants4.webp"
 import photo18 from "../../image/bb.webp"
 
+
 const ManPage = () => {
     return (
         <div id='manpage'>
@@ -58,6 +59,7 @@ const ManPage = () => {
                             <h1 className="cost">2100 сом</h1>
                             <h1 className="name">Футболка оверсайз / универсал</h1>
                         </div>
+
                     </div>
                     <div className="block">
                         <div className="select">
