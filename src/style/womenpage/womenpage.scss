@@ -1,7 +1,20 @@
 #womenpage{
   padding: 0 20px;
-
   .womenpage{
+    font-family: 'Inter',sans serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 48px;
+    color: #72072D;
+    padding-bottom: 40px;
+    img{
+      margin: 5px 20px;
+    }
+    .women-images{
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
     .title{
       font-family: 'Inter', sans-serif;
       font-style: normal;
@@ -29,6 +42,11 @@
       font-size: 16px;
       line-height: 117.69%;
       color: #000000;
+      .image5{
+        width: 238px;
+        height: 284px;
+       }
+      }
     }
   }
 }
