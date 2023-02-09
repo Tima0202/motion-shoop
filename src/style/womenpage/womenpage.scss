@@ -16,12 +16,31 @@
       grid-template-columns: repeat(5, 1fr);
       grid-template-rows: repeat(5, 1fr);
     .title{
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      color: #72072D;
+    }
+  }
+  .img-title{
+    display: flex;
+    j
+    .title2{
+      font-family: 'Roboto',sans-serif;
       font-style: normal;
       font-weight: 800;
       font-size: 24px;
       line-height: 117.69%;
-      letter-spacing: -0.025em;
+      color: #000000;
+    }
+    .desc{
+      font-family: 'Roboto',sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 117.69%;
       color: #000000;
       .image5{
         width: 238px;

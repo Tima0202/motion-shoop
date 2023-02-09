@@ -18,6 +18,7 @@ const WomenPage = () => {
                     <img src={salam1} alt=""/>
                     <img src={salam2} alt=""/>
                     <img src={salam3} alt=""/>
+
                     <img src={salam4} alt=""/><h1>Женская одежда</h1>
                 </div>
 
