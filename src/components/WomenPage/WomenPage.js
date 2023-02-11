@@ -20,12 +20,6 @@ import womenClothes14 from "../../image/jens.jpg"
 import womenClothes15 from "../../image/топ.webp"
 
 const WomenPage = () => {
-   ` $(function (){
-        $('.Показать еще').on('click', function (){
-            const btn = $(this);
-             
-        })
-    })`
     return (
         <div id="womenPage">
             <div className="container">
