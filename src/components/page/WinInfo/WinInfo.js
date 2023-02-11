@@ -10,9 +10,6 @@ const WinInfo = () => {
     const [buttonText, setButtonText] = useState("Добавить в корзину")
     const [buttonName, setButtonName] = useState("btn-add-cor")
 
-    const notify = () => toast("Пожалуйста, выберите размер!")
-
-
     const ButtonStyle = () =>{
         setButtonName("btn-add-cor2")
     }
@@ -66,7 +63,7 @@ const WinInfo = () => {
                                         ButtonStyle()
 
                                     }} className={buttonName}>{buttonText}</button>
-                                    <button onClick={()=>notify()} className='btn-buy'>Купить сейчас</button>
+                                    <button className='btn-buy'>Купить сейчас</button>
                                 </div>
                             </div>
                         ))
