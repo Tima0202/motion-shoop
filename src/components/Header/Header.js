@@ -16,22 +16,16 @@ const Header = () => {
                             <h1>MOTION SHOP</h1>
                         </Link>
                     </div>
-                    <div className="around"><input type="text" placeholder="Я ищу ..."/><AiOutlineSearch className="iconch"/></div>
+                    <div className="around"><input type="text" placeholder="Я ищу ..."/><AiOutlineSearch
+                        className="iconch"/></div>
                     <div className="right">
                         <div className="block">
-
-                            <Link className="block" to={"/WomenPage"}>
-                                <img src={logo} alt=""/>
-                                <span>FAQ</span>
-                            </Link>
-
-
+                            <img src={logo} alt=""/>
+                            <span>FAQ</span>
                         </div>
                         <div className="block">
-                            <Link className="block" to={"/ManPage"}>
-                                <img src={logo2} alt=""/>
-                                <span>О нас</span>
-                            </Link>
+                            <img src={logo2} alt=""/>
+                            <span>О нас</span>
                         </div>
                         <div className="block">
                             <img src={logo3} alt=""/>
