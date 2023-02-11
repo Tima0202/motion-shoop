@@ -1,0 +1,68 @@
+#wininfo{
+  padding: 4rem 0 4rem 15rem;
+
+  .wininfo{
+    .block{
+      display: flex;
+      .left{
+        img{
+          width: 30rem;
+          height: 40rem;
+        }
+      }
+      .right{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        h2{
+          font-weight: 700;
+          font-size: 36px;
+          background: linear-gradient(270deg, #FF005C 0%, #72072D 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        .sizes{
+          display: flex;
+          margin-top: 20px;
+          .size{
+            border-radius: 5px;
+            border: 1px solid black;
+            width: 6rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+          }
+        }
+        .colors{
+          display: flex;
+          .color{
+            width: 80px;
+            height: 150px;
+            margin:1rem 1rem 1rem 0;
+          }
+        }
+        .btn-add-cor{
+          color: white;
+          border: none;
+          font-size: 15px;
+          width: 271px;
+          height: 51px;
+          background: linear-gradient(90deg, #72072D 0%, #FF005C 100%);
+          border-radius: 5px;
+          margin-bottom: 1rem;
+        }
+        .btn-buy{
+          border: 1px solid #72072D;
+          font-size: 15px;
+          width: 271px;
+          height: 51px;
+          background: none;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
