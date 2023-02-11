@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import home1 from '../../image/home1.png'
 import homebg from '../../image/home-bg.png'
 import photo from "../../image/man.png"
@@ -7,25 +7,21 @@ import photo3 from "../../image/girl.png"
 import photo4 from "../../image/foot.png"
 import basket from "../../image/icons/basket.png"
 import {Link} from "react-router-dom";
-// photo recomend
-import reaomen1 from "../../image/recomen/Rectangle 2268.png"
-import reaomen2 from "../../image/recomen/Rectangle 2268 (1).png"
-import reaomen3 from "../../image/recomen/Rectangle 2268 (2).png"
-import reaomen4 from "../../image/recomen/Rectangle 2269.png"
-import reaomen5 from "../../image/recomen/Rectangle 2269 (1).png"
-import reaomen6 from "../../image/recomen/Rectangle 2269 (2).png"
-import reaomen7 from "../../image/recomen/Rectangle 2270.png"
-import reaomen8 from "../../image/recomen/Rectangle 2270 (1).png"
-import reaomen9 from "../../image/recomen/Rectangle 2270 (2).png"
-import reaomen10 from "../../image/recomen/Rectangle 2271.png"
-import reaomen11 from "../../image/recomen/Rectangle 2271 (1).png"
-import reaomen12 from "../../image/recomen/Rectangle 2271 (2).png"
-import reaomen13 from "../../image/recomen/Rectangle 2272.png"
-import reaomen14 from "../../image/recomen/Rectangle 2272 (1).png"
-import reaomen15 from "../../image/recomen/Rectangle 2272 (2).png"
+
+import {BsArrowDown} from "react-icons/bs";
+import Data from "../services/data";
+import WinInfo from "../page/WinInfo/WinInfo";
 
 
 const Home = () => {
+    const [viewMore, setViewMore] = useState(15)
+    const LoadMore = () =>{
+        setViewMore(viewMore + viewMore);
+
+    }
+
+    const slice = Data.slice(0, viewMore)
+
     return (
         <div id='home'>
             <img className="bag" src={homebg} alt=""/>
@@ -45,158 +41,52 @@ const Home = () => {
                     <div className="block2">
                         <h1>Категории</h1>
                         <div className="content-2">
-                            <img src={photo} alt="image"/>
-                            <img src={photo2} alt="image"/>
-                            <img src={photo3} alt="image"/>
-                            <img src={photo4} alt="image"/>
+                            <Link className='img' to={'/ManPage'}>
+                                <img src={photo} alt="image"/>
+                            </Link>
+                            <Link className='img' to={'/WomenPage'}>
+                                <img src={photo2} alt="image"/>
+                            </Link>
+                            <Link className='img' to={'/'}>
+                                <img src={photo3} alt="image"/>
+                            </Link>
+                            <Link className='img' to={'/'}>
+                                <img src={photo4} alt="image"/>
+                            </Link>
                         </div>
                     </div>
                     <div className="block3">
                         <h1>Возможно, Вам понравится</h1>
                         <div className="content-3">
-                            <div className="recomen-block">
-                                <div className="block-r">
-                                    <img className="man" src={reaomen1} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-
-                                <div className="block-r">
-                                    <img className="man" src={reaomen2} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-
-                                <div className="block-r">
-                                    <img className="man" src={reaomen3} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-
-                                <div className="block-r">
-                                    <img className="man" src={reaomen4} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-
-                                <div className="block-r">
-                                    <img className="man" src={reaomen5} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
+                            <div className="recomen-block1">
+                                <Link className='recomen-block' to={'/WinInfo'}>
+                                    {
+                                        slice.map(el =>
+                                            (
+                                                <div key={el.id} className="block-r">
+                                                    <img className="man" src={el.img} alt="image"/>
+                                                    <div className="block-content">
+                                                        <h1>{el.price}</h1>
+                                                        <img src={basket} alt=""/>
+                                                    </div>
+                                                    <h5>{el.desc}</h5>
+                                                </div>
+                                            )
+                                        )
+                                    }
+                                </Link>
                             </div>
-                            <div className="recomen-block">
-                                <div className="block-r">
-                                    <img className="man" src={reaomen6} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-
-                                <div className="block-r">
-                                    <img className="man" src={reaomen7} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-
-                                <div className="block-r">
-                                    <img className="man" src={reaomen8} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-
-                                <div className="block-r">
-                                    <img className="man" src={reaomen9} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-
-                                <div className="block-r">
-                                    <img className="man" src={reaomen10} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-                            </div>
-                            <div className="recomen-block">
-                                <div className="block-r">
-                                    <img className="man" src={reaomen11} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-
-                                <div className="block-r">
-                                    <img className="man" src={reaomen12} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-
-                                <div className="block-r">
-                                    <img className="man" src={reaomen13} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-
-                                <div className="block-r">
-                                    <img className="man" src={reaomen14} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-
-                                <div className="block-r">
-                                    <img className="man" src={reaomen15} alt="image"/>
-                                    <div className="block-content">
-                                        <h1>2100 сом</h1>
-                                        <img src={basket} alt=""/>
-                                    </div>
-                                    <h5>Джинсы момсы / банан</h5>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-                    <div className="block4"></div>
-                    <div className="block5"></div>
+                    <div className="block4">
+                        <div className="c-content">
+                            <button onClick={() => LoadMore()}>
+                                {viewMore === 15 ? "Показать ещё" : ""}
+                            </button>
+                            <BsArrowDown className="arrow-icon"/>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
