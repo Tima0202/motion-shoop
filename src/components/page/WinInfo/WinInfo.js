@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Data from "../../services/data";
 import {Link} from "react-router-dom";
-import {toast} from "react-toastify";
+import Modal from "../Modal/Modal";
 
 
 const WinInfo = () => {
@@ -9,6 +9,8 @@ const WinInfo = () => {
     const [style1, setStyle1] = useState("color")
     const [buttonText, setButtonText] = useState("Добавить в корзину")
     const [buttonName, setButtonName] = useState("btn-add-cor")
+    const [OpenModal, setOpenModal] = useState(false)
+    const [btnModal, setBtnModal] = useState(false)
 
     const ButtonStyle = () =>{
         setButtonName("btn-add-cor2")
@@ -16,18 +18,37 @@ const WinInfo = () => {
 
     const changeStyle = () =>{
         setStyle("size2")
+        setBtnModal(true)
     }
     const changeStyle1 = () =>{
         setStyle1("color2")
+    }
+
+    const logic = ()=>{
+        if (btnModal === true){
+            handleClick()
+            ButtonStyle()
+        } else {
+            handleClick2()
+        }
+    }
+
+    const handleClick2 = () =>{
+        setOpenModal(true)
+        const timer = setTimeout(()=>{
+            setOpenModal(false)
+        },2000)
     }
 
     const handleClick = () => {
         setButtonText("Добавлено")
         const timer = setTimeout(()=>{
             setButtonText(`Перейти на корзину`)
+            // setButtonText(`${<Link to={'/ManPage'}>Перейти на корзину</Link>}`)
             setButtonName("btn-add-cor3")
-        },2000)
+        },1500)
     }
+
 
     return (
         <div id="wininfo">
@@ -58,18 +79,17 @@ const WinInfo = () => {
                                         <div onClick={()=> changeStyle1()} style={{background: "black", cursor:"pointer"}} className={style1}></div>
                                         <div style={{background: "blue"}} className="color"></div>
                                     </div>
-                                    <button onClick={()=> {
-                                        handleClick()
-                                        ButtonStyle()
-
-                                    }} className={buttonName}>{buttonText}</button>
-                                    <button className='btn-buy'>Купить сейчас</button>
+                                    <div className="btns">
+                                        <button onClick={()=> logic()} className={buttonName}>{buttonText}</button>
+                                        <Modal open={OpenModal}/>
+                                        <button className='btn-buy'>Купить сейчас</button>
+                                    </div>
                                 </div>
                             </div>
                         ))
                     }
                     <h2>Описание</h2>
-                    <p> Футбо́лка — предмет нательной одежды для обоих полов, обычно не имеющий пуговиц[1],
+                    <p> Футбо́лка — предмет нательной одежды для обоих полов, обычно не имеющий пуговиц,
                         воротника и <br/> карманов, с короткими рукавами, закрывающий туловище, часть рук и
                         верх бёдер, надевается через <br/> голову. Является одним из самых массовых видов
                         одежды

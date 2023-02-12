@@ -85,6 +85,9 @@
         color: #72072D;
         padding: 5rem 4.5rem;
       }
+      h2{
+        display: none;
+      }
 
       .content-3 {
         display: flex;
@@ -155,6 +158,9 @@
         height: 48px;
         border: 1.5px solid #D118A8;
         border-radius: 40px;
+      }
+      .c-content1{
+        display: none;
       }
 
       button {

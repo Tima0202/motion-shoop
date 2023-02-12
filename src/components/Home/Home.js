@@ -10,11 +10,15 @@ import {Link} from "react-router-dom";
 
 import {BsArrowDown} from "react-icons/bs";
 import Data from "../services/data";
-import WinInfo from "../page/WinInfo/WinInfo";
-
 
 const Home = () => {
     const [viewMore, setViewMore] = useState(15)
+    const [Block, setBlock] = useState("c-content")
+
+    const ButtonBlock = () =>{
+        setBlock("c-content1")
+    }
+
     const LoadMore = () =>{
         setViewMore(viewMore + viewMore);
 
@@ -57,6 +61,7 @@ const Home = () => {
                     </div>
                     <div className="block3">
                         <h1>Возможно, Вам понравится</h1>
+                        <h2>Для вас</h2>
                         <div className="content-3">
                             <div className="recomen-block1">
                                 <Link className='recomen-block' to={'/WinInfo'}>
@@ -79,10 +84,8 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="block4">
-                        <div className="c-content">
-                            <button onClick={() => LoadMore()}>
-                                {viewMore === 15 ? "Показать ещё" : ""}
-                            </button>
+                        <div onClick={()=> ButtonBlock()} className={Block}>
+                            <button onClick={() => LoadMore()}>Показать ещё</button>
                             <BsArrowDown className="arrow-icon"/>
                         </div>
 
