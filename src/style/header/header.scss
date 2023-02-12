@@ -6,6 +6,12 @@
     height: 35px;
     margin: 0 2.8rem 0 2.8rem;
   }
+  .img-media{
+    display: none;
+  }
+  .img-media1{
+    display: none;
+  }
   .header{
     display: flex;
     justify-content: space-between;
@@ -13,7 +19,19 @@
     padding: 40px 0;
     position: relative;
     z-index: 1;
+    .burger_menu{
+      display: none;
+    }
     .left{
+      h5{
+        display: none;
+      }
+      h2{
+        display: none;
+      }
+      .app{
+        display: none;
+      }
     }
     .iconch{
       position: absolute;
@@ -50,6 +68,13 @@
         span{
           padding-top: 5px;
         }
+      }
+      .block1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 2rem;
       }
     }
   }

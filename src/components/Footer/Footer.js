@@ -49,6 +49,15 @@ const Footer = () => {
                         <h5 style={{textAlign:'center', paddingTop:'18px', color:'white'}}>Motion-Shop - все права защищены</h5>
                     </div>
                 </div>
+                <div className="footer2">
+                    <h1>MOTION</h1>
+                    <h5>SHOP</h5>
+                    <h4>Motion Shop 2022 - все права защищены </h4>
+
+                    <h3>Пользовательские соглашения</h3>
+                    <h3>Политика конфиденциальности</h3>
+                    <p>Все товары привозные из Турции. Гарантия / Качество / <br/> Удобство</p>
+                </div>
             </div>
         </div>
     );

@@ -72,46 +72,64 @@
             border: 2px solid red;
           }
         }
-        .btn-add-cor{
-          color: white;
-          border: none;
-          font-size: 15px;
-          width: 271px;
-          height: 51px;
-          background: linear-gradient(90deg, #72072D 0%, #FF005C 100%);
-          border-radius: 5px;
-          margin-bottom: 1rem;
-        }
-        .btn-add-cor2{
-          color: white;
-          border: none;
-          font-size: 15px;
-          width: 271px;
-          height: 51px;
-          background: #5ECC07;
-          border-radius: 5px;
-          margin-bottom: 1rem;
-        }
-        .btn-add-cor3{
-          color: #FF005C;
-          border: 1px solid #FF005C;
-          font-size: 15px;
-          width: 271px;
-          height: 51px;
-          background: none;
-          border-radius: 5px;
-          margin-bottom: 1rem;
-        }
-        .btn-buy{
-          border: 1px solid #72072D;
-          font-size: 15px;
-          width: 271px;
-          height: 51px;
-          background: none;
-          border-radius: 5px;
+        .btns{
+          display: flex;
+          flex-direction: column;
+          .btn-add-cor{
+            color: white;
+            border: none;
+            font-size: 15px;
+            width: 271px;
+            height: 51px;
+            background: linear-gradient(90deg, #72072D 0%, #FF005C 100%);
+            border-radius: 5px;
+            margin-bottom: 1rem;
+          }
+          .btn-add-cor2{
+            color: white;
+            border: none;
+            font-size: 15px;
+            width: 271px;
+            height: 51px;
+            background: #5ECC07;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+          }
+          .btn-add-cor3{
+            color: #FF005C;
+            border: 1px solid #FF005C;
+            font-size: 15px;
+            width: 271px;
+            height: 51px;
+            background: none;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+          }
+          .btn-buy{
+            border: 1px solid #72072D;
+            font-size: 15px;
+            width: 271px;
+            height: 51px;
+            background: none;
+            border-radius: 5px;
+          }
         }
       }
     }
   }
+}
+
+.modal{
+  position: absolute;
+  z-index: 1;
+  top: 45.5rem;
+  right: 33rem;
+  display: flex;
+  color: #FF005C;
+  border: 1px solid #FF005C;
+  width: 15.5rem;
+  height: 1.6rem;
+  align-items: center;
+  justify-content: center;
 }
 
