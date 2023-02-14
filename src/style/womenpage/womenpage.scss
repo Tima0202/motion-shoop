@@ -39,6 +39,36 @@
         }
       }
     }
+
+  .women-image{
+    .title{
+      font-family: 'Roboto',sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 117.69%;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+      .desc{
+        font-family: 'Roboto',sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 117.69%;
+        color: #000000;
+        margin-bottom: 20px;
+      }
+      .img-block{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .shirt{
+          width: 238px;
+          height: 284px;
+        }
+      }
+    }
   button{
     width: 227px;
     height: 48px;
