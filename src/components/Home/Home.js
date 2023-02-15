@@ -38,7 +38,7 @@ const Home = () => {
                             <ul style={{listStyleType:"circle"}}>
                                 <li><Link to={'/WomenPage'}>Для женщин</Link></li>
                                 <li><Link to={'/ManPage'}>Для мужчин</Link></li>
-                                <li><Link to={'/'}>Для детей</Link></li>
+                                <li><Link to={'/GirlPage'}>Для детей</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -51,10 +51,10 @@ const Home = () => {
                             <Link className='img' to={'/WomenPage'}>
                                 <img src={photo2} alt="image"/>
                             </Link>
-                            <Link className='img' to={'/'}>
+                            <Link className='img' to={'/GirlPage'}>
                                 <img src={photo3} alt="image"/>
                             </Link>
-                            <Link className='img' to={'/'}>
+                            <Link className='img' to={'/ShoesPage'}>
                                 <img src={photo4} alt="image"/>
                             </Link>
                         </div>
