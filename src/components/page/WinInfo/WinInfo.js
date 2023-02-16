@@ -5,8 +5,8 @@ import Modal from "../Modal/Modal";
 
 
 const WinInfo = () => {
-    const [style, setStyle] = useState("size")
-    const [style1, setStyle1] = useState("color")
+    const [style, setStyle] = useState(false)
+    const [style2, setStyle2] = useState(false)
     const [buttonText, setButtonText] = useState("Добавить в корзину")
     const [buttonName, setButtonName] = useState("btn-add-cor")
     const [OpenModal, setOpenModal] = useState(false)
@@ -17,12 +17,12 @@ const WinInfo = () => {
     }
 
     const changeStyle = () =>{
-        setStyle("size2")
-        setBtnModal(true)
+        setBtnModal(current => !current)
     }
     const changeStyle1 = () =>{
-        setStyle1("color2")
+        setStyle(current => !current)
     }
+
 
     const logic = ()=>{
         if (btnModal === true){
@@ -40,12 +40,16 @@ const WinInfo = () => {
         },2000)
     }
 
+    const tag =() =>{
+        return(<Link style={{color:'red'}} to={'/basket'}>Перейти на корзину</Link>)
+    }
+
     const handleClick = () => {
         setButtonText("Добавлено")
         const timer = setTimeout(()=>{
-            setButtonText(`Перейти на корзину`)
-            // setButtonText(`${<Link to={'/ManPage'}>Перейти на корзину</Link>}`)
+            setButtonText(tag)
             setButtonName("btn-add-cor3")
+            // setBtnModal(false)
         },1500)
     }
 
@@ -67,7 +71,10 @@ const WinInfo = () => {
                                     <div className="sizes">
                                         <div className="size">M</div>
                                         <div className="size">XL</div>
-                                        <div onClick={()=> changeStyle()} className={style}>XXL</div>
+                                        <div style={{
+                                            color: btnModal ? "red" : "",
+                                            border: btnModal ? "2px solid red" : ""
+                                        }} onClick={()=> changeStyle()} className='size'>XXL</div>
                                         <div className="size">C</div>
                                         <div className="size">S</div>
                                         <div className="size">XS</div>
@@ -76,11 +83,17 @@ const WinInfo = () => {
                                     <div className="colors">
                                         <div style={{background: "red"}} className="color"></div>
                                         <div style={{background: "green"}} className="color"></div>
-                                        <div onClick={()=> changeStyle1()} style={{background: "black", cursor:"pointer"}} className={style1}></div>
+                                        <div onClick={()=> changeStyle1()} style={{
+                                            background: "black",
+                                            cursor:"pointer",
+                                            border: style ? "2px solid red" : ""
+                                        }} className='color'></div>
                                         <div style={{background: "blue"}} className="color"></div>
                                     </div>
                                     <div className="btns">
-                                        <button onClick={()=> logic()} className={buttonName}>{buttonText}</button>
+                                        <button onClick={()=> {
+                                            logic()
+                                        }} className={buttonName}>{buttonText}</button>
                                         <Modal open={OpenModal}/>
                                         <button className='btn-buy'>Купить сейчас</button>
                                     </div>

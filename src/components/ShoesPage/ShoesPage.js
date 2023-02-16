@@ -1,13 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const ShoesPage = () => {
-    return (
-        <div id="shoes">
-            <div className="container">
-                <div className="shoes">
+    const [isActive, setIsActive] = useState(false);
 
-                </div>
-            </div>
+    const handleClick = () => {
+        setIsActive(current => !current);
+    }
+
+    return (
+        <div>
+            <button
+                style={{
+                    backgroundColor: isActive ? 'salmon' : '',
+                    color: isActive ? 'white' : '',
+                }}
+                onClick={handleClick}
+            >
+                Click
+            </button>
         </div>
     );
 };

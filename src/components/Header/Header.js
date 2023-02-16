@@ -46,8 +46,11 @@ const Header = () => {
                             <span>О нас</span>
                         </div>
                         <div className="block">
-                            <img src={logo3} alt=""/>
-                            <span>Корзина</span>
+                            <Link className='block' to={'/basket'}>
+                                <img src={logo3} alt=""/>
+                                <span>Корзина</span>
+                            </Link>
+
                         </div>
                     </div>
                 </div>
