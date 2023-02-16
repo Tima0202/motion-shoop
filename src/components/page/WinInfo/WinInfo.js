@@ -1,33 +1,57 @@
 import React, {useState} from 'react';
 import Data from "../../services/data";
 import {Link} from "react-router-dom";
+import Modal from "../Modal/Modal";
 
 const WinInfo = () => {
-    const [style, setStyle] = useState("size")
-    const [style1, setStyle1] = useState("color")
+    const [style, setStyle] = useState(false)
+    const [style2, setStyle2] = useState(false)
     const [buttonText, setButtonText] = useState("Добавить в корзину")
     const [buttonName, setButtonName] = useState("btn-add-cor")
-
-
+    const [OpenModal, setOpenModal] = useState(false)
+    const [btnModal, setBtnModal] = useState(false)
 
     const ButtonStyle = () =>{
         setButtonName("btn-add-cor2")
     }
 
     const changeStyle = () =>{
-        setStyle("size2")
+        setBtnModal(current => !current)
     }
     const changeStyle1 = () =>{
-        setStyle1("color2")
+        setStyle(current => !current)
+    }
+
+
+    const logic = ()=>{
+        if (btnModal === true){
+            handleClick()
+            ButtonStyle()
+        } else {
+            handleClick2()
+        }
+    }
+
+    const handleClick2 = () =>{
+        setOpenModal(true)
+        const timer = setTimeout(()=>{
+            setOpenModal(false)
+        },2000)
+    }
+
+    const tag =() =>{
+        return(<Link style={{color:'red'}} to={'/basket'}>Перейти на корзину</Link>)
     }
 
     const handleClick = () => {
         setButtonText("Добавлено")
         const timer = setTimeout(()=>{
-            setButtonText(`Перейти на корзину`)
+            setButtonText(tag)
             setButtonName("btn-add-cor3")
-        },2000)
+            // setBtnModal(false)
+        },1500)
     }
+
 
     return (
         <div id="wininfo">
@@ -46,7 +70,10 @@ const WinInfo = () => {
                                     <div className="sizes">
                                         <div className="size">M</div>
                                         <div className="size">XL</div>
-                                        <div onClick={()=> changeStyle()} className={style}>XXL</div>
+                                        <div style={{
+                                            color: btnModal ? "red" : "",
+                                            border: btnModal ? "2px solid red" : ""
+                                        }} onClick={()=> changeStyle()} className='size'>XXL</div>
                                         <div className="size">C</div>
                                         <div className="size">S</div>
                                         <div className="size">XS</div>
@@ -55,19 +82,26 @@ const WinInfo = () => {
                                     <div className="colors">
                                         <div style={{background: "red"}} className="color"></div>
                                         <div style={{background: "green"}} className="color"></div>
-                                        <div onClick={()=> changeStyle1()} style={{background: "black", cursor:"pointer"}} className={style1}></div>
+                                        <div onClick={()=> changeStyle1()} style={{
+                                            background: "black",
+                                            cursor:"pointer",
+                                            border: style ? "2px solid red" : ""
+                                        }} className='color'></div>
                                         <div style={{background: "blue"}} className="color"></div>
                                     </div>
-                                    <button onClick={()=> {
-                                        handleClick()
-                                        ButtonStyle()
-                                    }} className={buttonName}>{buttonText}</button>
+                                    <div className="btns">
+                                        <button onClick={()=> {
+                                            logic()
+                                        }} className={buttonName}>{buttonText}</button>
+                                        <Modal open={OpenModal}/>
+                                        <button className='btn-buy'>Купить сейчас</button>
+                                    </div>
                                 </div>
                             </div>
                         ))
                     }
                     <h2>Описание</h2>
-                    <p> Футбо́лка — предмет нательной одежды для обоих полов, обычно не имеющий пуговиц[1],
+                    <p> Футбо́лка — предмет нательной одежды для обоих полов, обычно не имеющий пуговиц,
                         воротника и <br/> карманов, с короткими рукавами, закрывающий туловище, часть рук и
                         верх бёдер, надевается через <br/> голову. Является одним из самых массовых видов
                         одежды

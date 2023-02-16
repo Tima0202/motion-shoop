@@ -10,11 +10,15 @@ import {Link} from "react-router-dom";
 
 import {BsArrowDown} from "react-icons/bs";
 import Data from "../services/data";
-import WinInfo from "../page/WinInfo/WinInfo";
-
 
 const Home = () => {
     const [viewMore, setViewMore] = useState(15)
+    const [Block, setBlock] = useState("c-content")
+
+    const ButtonBlock = () =>{
+        setBlock("c-content1")
+    }
+
     const LoadMore = () =>{
         setViewMore(viewMore + viewMore);
 
@@ -34,7 +38,7 @@ const Home = () => {
                             <ul style={{listStyleType:"circle"}}>
                                 <li><Link to={'/WomenPage'}>Для женщин</Link></li>
                                 <li><Link to={'/ManPage'}>Для мужчин</Link></li>
-                                <li><Link to={'/'}>Для детей</Link></li>
+                                <li><Link to={'/GirlPage'}>Для детей</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -47,16 +51,17 @@ const Home = () => {
                             <Link className='img' to={'/WomenPage'}>
                                 <img src={photo2} alt="image"/>
                             </Link>
-                            <Link className='img' to={'/'}>
+                            <Link className='img' to={'/GirlPage'}>
                                 <img src={photo3} alt="image"/>
                             </Link>
-                            <Link className='img' to={'/'}>
+                            <Link className='img' to={'/ShoesPage'}>
                                 <img src={photo4} alt="image"/>
                             </Link>
                         </div>
                     </div>
                     <div className="block3">
                         <h1>Возможно, Вам понравится</h1>
+                        <h2>Для вас</h2>
                         <div className="content-3">
                             <div className="recomen-block1">
                                 <Link className='recomen-block' to={'/WinInfo'}>
@@ -79,10 +84,8 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="block4">
-                        <div className="c-content">
-                            <button onClick={() => LoadMore()}>
-                                {viewMore === 15 ? "Показать ещё" : ""}
-                            </button>
+                        <div onClick={()=> ButtonBlock()} className={Block}>
+                            <button onClick={() => LoadMore()}>Показать ещё</button>
                             <BsArrowDown className="arrow-icon"/>
                         </div>
 
