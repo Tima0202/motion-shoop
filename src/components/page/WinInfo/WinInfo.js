@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import Data from "../../services/data";
 import {Link} from "react-router-dom";
-import {toast} from "react-toastify";
-
 
 const WinInfo = () => {
     const [style, setStyle] = useState("size")
@@ -10,7 +8,6 @@ const WinInfo = () => {
     const [buttonText, setButtonText] = useState("Добавить в корзину")
     const [buttonName, setButtonName] = useState("btn-add-cor")
 
-    const notify = () => toast("Пожалуйста, выберите размер!")
 
 
     const ButtonStyle = () =>{
@@ -64,9 +61,7 @@ const WinInfo = () => {
                                     <button onClick={()=> {
                                         handleClick()
                                         ButtonStyle()
-
                                     }} className={buttonName}>{buttonText}</button>
-                                    <button onClick={()=>notify()} className='btn-buy'>Купить сейчас</button>
                                 </div>
                             </div>
                         ))
