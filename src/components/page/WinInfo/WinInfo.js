@@ -3,7 +3,6 @@ import Data from "../../services/data";
 import {Link} from "react-router-dom";
 import Modal from "../Modal/Modal";
 
-
 const WinInfo = () => {
     const [style, setStyle] = useState(false)
     const [style2, setStyle2] = useState(false)
