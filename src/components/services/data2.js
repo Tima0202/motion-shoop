@@ -1,4 +1,3 @@
-import React from 'react';
 import womenClothes1 from "../../image/wom-img2.svg"
 import womenClothes2 from "../../image/wom-img3.svg"
 import womenClothes3 from "../../image/wom-img4.svg"

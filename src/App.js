@@ -10,6 +10,7 @@ import WomenPage from "./components/WomenPage/WomenPage";
 import WinInfo from "./components/page/WinInfo/WinInfo";
 import ShoesPage from "./components/ShoesPage/ShoesPage";
 import GirlPage from "./components/GirlPage/GirlPage";
+import Basket from "./components/Basket/Basket";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route path={'/WinInfo'} element={<WinInfo/>}/>
           <Route path={'/GirlPage'} element={<GirlPage/>}/>
           <Route path={'/ShoesPage'} element={<ShoesPage/>}/>
+          <Route path={'/basket'} element={<Basket/>}/>
       </Routes>
     </div>
   );
