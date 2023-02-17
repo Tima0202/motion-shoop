@@ -1,18 +1,12 @@
-import React, {useState} from 'react';
-import salam1 from "../../image/man.png";
-import salam2 from "../../image/woman.png";
-import salam3 from "../../image/girl.png";
-import salam4 from "../../image/foot.png";
+
+import React from 'react';
 
 
 const ShoesPage = () => {
-    const [isActive, setIsActive] = useState(false);
 
-    const handleClick = () => {
-        setIsActive(current => !current);
-    }
 
     return (
+
         <div id="shoesPage">
             <div className="container">
                 <div className="shoesPage">
@@ -27,6 +21,7 @@ const ShoesPage = () => {
                 <div className="col text-center after-posts">
                     <button type="button" className="btn btn-secondary">Показать еще 	&darr;</button>                </div>
             </div>
+
         </div>
     );
 };
