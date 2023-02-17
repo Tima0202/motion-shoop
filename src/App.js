@@ -11,6 +11,8 @@ import WinInfo from "./components/page/WinInfo/WinInfo";
 import ShoesPage from "./components/ShoesPage/ShoesPage";
 import GirlPage from "./components/GirlPage/GirlPage";
 import Basket from "./components/Basket/Basket";
+import Faq from "./components/Faq/Faq";
+import Info from "./components/Info/Info";
 
 function App() {
 
@@ -26,6 +28,8 @@ function App() {
           <Route path={'/GirlPage'} element={<GirlPage/>}/>
           <Route path={'/ShoesPage'} element={<ShoesPage/>}/>
           <Route path={'/basket'} element={<Basket/>}/>
+          <Route path={'/faq'} element={<Faq/>}/>
+          <Route path={'/info'} element={<Info/>}/>
       </Routes>
     </div>
   );

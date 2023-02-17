@@ -38,12 +38,16 @@ const Header = () => {
                         className="iconch"/></div>
                     <div className="right">
                         <div className="block">
-                            <img src={logo} alt=""/>
-                            <span>FAQ</span>
+                            <Link to={'/faq'} className='block'>
+                                <img src={logo} alt=""/>
+                                <span>FAQ</span>
+                            </Link>
                         </div>
                         <div className="block">
-                            <img src={logo2} alt=""/>
-                            <span>О нас</span>
+                            <Link className='block' to={'/info'}>
+                                <img src={logo2} alt=""/>
+                                <span>О нас</span>
+                            </Link>
                         </div>
                         <div className="block">
                             <Link className='block' to={'/basket'}>

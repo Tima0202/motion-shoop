@@ -2,21 +2,22 @@ import React, {useState} from 'react';
 import Data from "../../services/data";
 import {Link} from "react-router-dom";
 import Modal from "../Modal/Modal";
+import {useDispatch} from "react-redux";
 
 const WinInfo = () => {
     const [style, setStyle] = useState(false)
-    const [style2, setStyle2] = useState(false)
     const [buttonText, setButtonText] = useState("Добавить в корзину")
     const [buttonName, setButtonName] = useState("btn-add-cor")
     const [OpenModal, setOpenModal] = useState(false)
     const [btnModal, setBtnModal] = useState(false)
+    const dispatch = useDispatch()
 
     const ButtonStyle = () =>{
         setButtonName("btn-add-cor2")
     }
 
     const changeStyle = () =>{
-        setBtnModal(current => !current)
+        setBtnModal(s => !s)
     }
     const changeStyle1 = () =>{
         setStyle(current => !current)
@@ -37,6 +38,7 @@ const WinInfo = () => {
         const timer = setTimeout(()=>{
             setOpenModal(false)
         },2000)
+        return timer
     }
 
     const tag =() =>{
@@ -44,12 +46,17 @@ const WinInfo = () => {
     }
 
     const handleClick = () => {
+        // addToBasket()
         setButtonText("Добавлено")
         const timer = setTimeout(()=>{
             setButtonText(tag)
             setButtonName("btn-add-cor3")
-            // setBtnModal(false)
         },1500)
+        return timer
+    }
+
+    const addToBasket = (product) => {
+        dispatch({type: 'ADD_TO_BASKET', payload: product})
     }
 
 
