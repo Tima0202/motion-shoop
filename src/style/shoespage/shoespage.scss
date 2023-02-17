@@ -1,0 +1,56 @@
+#shoesPage{
+  padding: 0 20px;
+  .shoesPage{
+    font-family: 'Inter',sans serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 48px;
+    color: #72072D;
+    padding-bottom: 40px;
+  }
+
+  .shoes-images{
+    .title{
+      font-family: 'Roboto',sans-serif;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 117.69%;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+    .desc{
+      font-family: 'Roboto',sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 117.69%;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+    .img-block{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .shirt{
+        width: 238px;
+        height: 284px;
+      }
+    }
+  }
+  .button{
+    width: 227px;
+    height: 48px;
+    border: 1.5px solid #D118A8;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #D118A8;
+  }
+}
